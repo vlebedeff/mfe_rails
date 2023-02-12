@@ -23,6 +23,7 @@ class FavoritesController < ApplicationController
   end
 
   def index
+    render(partial: 'favorites/count') if params[:count_only]
   end
 
   private def favorite_params
