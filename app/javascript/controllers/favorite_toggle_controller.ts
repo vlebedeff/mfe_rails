@@ -16,6 +16,10 @@ export default class FavoriteToggleController extends Controller {
 
   toggle(): void {
     this.flipState()
+  }
+
+  visibleValueChanged(value: boolean, previousValue: boolean): void {
+    console.log("visible value changed", { value, previousValue })
     this.updateHiddenClass()
     this.updateText()
   }
